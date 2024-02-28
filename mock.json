@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "name": "John Doe",
+      "address": "789 Oak St",
+      "telephone": "555-9012",
+      "own_restaurants": [1]
+    },
+    {
+      "id": 102,
+      "name": "Jane Smith",
+      "address": "321 Pine St",
+      "telephone": "555-3456",
+      "own_restaurants": [2]
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Restaurant A",
+      "address": "123 Main St",
+      "telephone": "555-1234",
+      "owner_id": 101,
+      "dishes": [
+        {
+          "dish": "Pizza",
+          "price": 10.99
+        },
+        {
+          "dish": "Burger",
+          "price": 8.99
+        },
+        {
+          "dish": "Salad",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Restaurant B",
+      "address": "456 Elm St",
+      "telephone": "555-5678",
+      "owner_id": 102,
+      "dishes": [
+        {
+          "dish": "Sushi",
+          "price": 12.99
+        },
+        {
+          "dish": "Pasta",
+          "price": 9.99
+        },
+        {
+          "dish": "Steak",
+          "price": 15.99
+        }
+      ]
+    }
+  ]
+}
