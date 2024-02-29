@@ -9,7 +9,8 @@ interface Card {
   address: string;
   telephone: string;
   owner_id: number;
-  dishes: Dish[]
+  dishes: Dish[];
+  photo?: string;
 }
 
 interface Dish{
@@ -20,7 +21,7 @@ interface Dish{
 export function App() {
 
   const [cards] = useState<Card[]>(mockCards["restaurants"]);
-
+  
 
   return (
     <>

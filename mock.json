@@ -5,14 +5,16 @@
       "name": "John Doe",
       "address": "789 Oak St",
       "telephone": "555-9012",
-      "own_restaurants": [1]
+      "own_restaurants": [1],
+      "cart": [] 
     },
     {
       "id": 102,
       "name": "Jane Smith",
       "address": "321 Pine St",
       "telephone": "555-3456",
-      "own_restaurants": [2]
+      "own_restaurants": [2],
+      "cart": [] 
     }
   ],
   "restaurants": [
@@ -22,6 +24,7 @@
       "address": "123 Main St",
       "telephone": "555-1234",
       "owner_id": 101,
+      "photo":"./public/vite.svg",
       "dishes": [
         {
           "dish": "Pizza",
@@ -43,6 +46,7 @@
       "address": "456 Elm St",
       "telephone": "555-5678",
       "owner_id": 102,
+      "photo":"./public/vite.svg",
       "dishes": [
         {
           "dish": "Sushi",

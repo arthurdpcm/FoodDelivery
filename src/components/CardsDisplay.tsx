@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './Card';
 
 interface Card {
   id:number;
@@ -6,7 +7,8 @@ interface Card {
   address: string;
   telephone: string;
   owner_id: number;
-  dishes: Dish[]
+  dishes: Dish[];
+  photo?: string;
 }
 
 interface Dish{
@@ -19,11 +21,17 @@ interface CardsDisplayProps {
 }
 
 const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards }) => {
+  console.log(cards[0])
   return (
     <>
-      {cards.map((card) => {
-        <h1>{card.name}</h1>
-      })}
+      <section className='flex justify-center mt-40 gap-10'>
+        {cards.map((card) => {
+          return <Card key={card.id} name={card.name}
+          address={card.address}
+          telephone={card.telephone}
+          photo={card.photo} /> 
+        })}
+      </section>
     </>
   );
 };
