@@ -33,27 +33,27 @@ const MenuButton: React.FC = () => {
         {isOpen ? (
           <div className="text-center">
             <ul className='flex flex-col gap-5 text-xl text-zinc-800 font-medium mt-5 '>
-              <li className='hover:bg-yellow-200 transition duration-300'>
+              <li className='hover:bg-yellow-300 hover:bg-opacity-60 transition duration-300'>
                 <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Restaurants</a>
               </li>
-              <li className='hover:bg-yellow-200 transition duration-300'>
+              <li className='hover:bg-yellow-300 hover:bg-opacity-60 transition duration-300'>
                 <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Orders</a>
               </li>
               {!isLogged ? (
                 <>
-                    <li className='hover:bg-yellow-200 transition duration-300'>
+                    <li className='hover:bg-yellow-300 hover:bg-opacity-60 transition duration-300'>
                       <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Log In</a>
                     </li>
-                    <li className='hover:bg-yellow-200 transition duration-300'>
+                    <li className='hover:bg-yellow-300 hover:bg-opacity-60 transition duration-300'>
                       <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Sign Up</a>
                     </li>
                   </>
               ):(
                 <>
-                  <li className='hover:bg-yellow-200 transition duration-300'>
+                  <li className='hover:bg-yellow-300 hover:bg-opacity-60 transition duration-300'>
                     <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Profile</a>
                   </li>
-                  <li className='hover:bg-yellow-200 transition duration-300'>
+                  <li className='hover:bg-yellow-300 hover:bg-opacity-60 transition duration-300'>
                     <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Log out</a>
                   </li>
                 </>
