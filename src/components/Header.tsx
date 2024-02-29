@@ -21,7 +21,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex gap-20 items-start justify-between mt-20">
+    <header className="flex gap-20 justify-between mt-20 items-center">
       <div className={`mb-2 sm:mb-0 flex flex-row gap-20 items-center`}>
         <a href='/' className={`text-4xl ml-16`}><strong>Food</strong>Delivery</a>
         {isSmallScreen ? null : (
@@ -39,7 +39,7 @@ const Header = () => {
             <ul className="flex flex-row gap-4 text-sm sm:text-xl items-center">
             {!isLogged ? (
                 <>
-                  <li><a href="#" className="hover:underline font-light">Sign Up</a></li>
+                  <li className="w-20"><a href="#" className="hover:underline font-light">Sign Up</a></li>
                   <li>
                     <a href="#" className="hover:underline">
                       <button
