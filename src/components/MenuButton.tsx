@@ -1,5 +1,5 @@
 // import { Menu } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 // import MenuHome from './MenuHome';
 import '../../styles/menuButton.css';
 // import {   } from 'react-router-dom';
@@ -9,61 +9,61 @@ import '../../styles/menuButton.css';
 //   className:string;
 // }
 
-
 const MenuButton: React.FC = () => {
 
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  // const history = useHistory();
-
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const isLogged = false
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // useEffect(() => {
-  //   const params = new URLSearchParams(history.location.search);
-  //   params.set('isOpen', String(isOpen));
-  //   history.push({ search: params.toString() });
-  // }, [isOpen, history]);
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <>
-    <div className={` ${ isOpen ? 'w-60  bg-yellow-400 mr-12' : ''}`}>
-        <div id="nav-icon3" className={` ${ isOpen ? 'open' : ''}`} onClick={handleToggleMenu}>
+      <div className={` ${isOpen ? ' w-full h-full  bg-yellow-400 fixed top-0 right-0' : 'mt-2'}`}>
+        <div id="nav-icon3" className={` ${isOpen ? 'open' : ''}`} onClick={handleToggleMenu}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
         {isOpen ? (
-          <div className=' '>
-            <ul className='pl-10 text-xl text-zinc-800 font-medium'>
-              <li className='hover:bg-yellow-200 transition duration-300 mt-2'>
-                <a href='/' className='pl-3 py-3 block '>Restaurants</a>
+          <div className="text-center">
+            <ul className='flex flex-col gap-5 text-xl text-zinc-800 font-medium mt-5 '>
+              <li className='hover:bg-yellow-200 transition duration-300'>
+                <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Restaurants</a>
               </li>
               <li className='hover:bg-yellow-200 transition duration-300'>
-                <a href='/' className='pl-3 py-3 block'>Orders</a>
+                <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Orders</a>
               </li>
-              <li className='hover:bg-yellow-200 transition duration-300'>
-                <a href='/' className='pl-3 py-3 block'>Sign Up</a>
-              </li>
-              <li className='hover:bg-yellow-200 transition duration-300'>
-                <a href='/' className='pl-3 py-3 mb-5 block'>Sign In</a>
-              </li>
+              {!isLogged ? (
+                <>
+                    <li className='hover:bg-yellow-200 transition duration-300'>
+                      <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Log In</a>
+                    </li>
+                    <li className='hover:bg-yellow-200 transition duration-300'>
+                      <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Sign Up</a>
+                    </li>
+                  </>
+              ):(
+                <>
+                  <li className='hover:bg-yellow-200 transition duration-300'>
+                    <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Profile</a>
+                  </li>
+                  <li className='hover:bg-yellow-200 transition duration-300'>
+                    <a href='/' className=' py-3 block' onClick={handleCloseMenu}>Log out</a>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
-        ):null}
-
+        ) : null}
       </div>
-      
-      
-
-
-
-
-
     </>
   );
-
 };
 
 export default MenuButton;

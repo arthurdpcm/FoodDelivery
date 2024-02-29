@@ -8,8 +8,9 @@
 
 #nav-icon3.open {
   margin-left: auto;
-  margin-right: 2rem;
-  margin-top: 1rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
+    
 }
 #nav-icon3.open:hover {
   transition: transform 0.5s ease-in-out;
