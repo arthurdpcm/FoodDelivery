@@ -18,13 +18,13 @@ const FilterRestaurants: React.FC<FilterRestaurantsProps> = ({ onFilter, nameRes
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newName = e.target.value;
     setNameRestaurantFilter(newName);
-    onFilter(newName, typeRestaurantFilter); 
+    // onFilter(newName, typeRestaurantFilter); 
   };
 
   const handleTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newType = e.target.value;
     setTypeRestaurantFilter(newType);
-    onFilter(nameRestaurantFilter, newType); 
+    // onFilter(nameRestaurantFilter, newType); 
   };
 
   return (

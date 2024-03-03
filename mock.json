@@ -161,6 +161,30 @@
           "price": 8.99
         }
       ]
+    },
+    {
+      "id": 7,
+      "name": "Flourish Artisan Bakery",
+      "description": "Experience the art of baking at Flourish Artisan Bakery, where we create a variety of artisan bread, pastries, and specialty desserts.",
+      "address": "123 Rosemary Lane",
+      "telephone": "555-6789",
+      "owner_id": 103,
+      "photo": "/artisan_bakery.jpeg",
+      "type": "Bakery",
+      "dishes": [
+        {
+          "dish": "Sourdough Bread",
+          "price": 5.99
+        },
+        {
+          "dish": "Almond Croissant",
+          "price": 4.49
+        },
+        {
+          "dish": "Fruit Tart",
+          "price": 6.99
+        }
+      ]
     }
   ]
 }

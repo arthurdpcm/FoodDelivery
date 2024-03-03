@@ -3,6 +3,7 @@ import CardsDisplay from "./components/Card/CardsDisplay";
 import Header from "./components/Header";
 import mockCards from "../mock.json"
 import { useState } from "react";
+import TypesDisplay from './components/TypesDisplay';
 
 interface Card {
   id:number;
@@ -54,13 +55,13 @@ export function App() {
           </form>
         </section>
         
-      <div className='flex flex-col mx-20 md:mx-32 lg:mx-40 xl:mx-48'>
+      <div className='flex flex-col mx-12 md:mx-32 lg:mx-40 xl:mx-48'>
         <hr className=' my-5 w-full border-zinc-200' />
 
         <h1 className='font-semibold text-3xl'>Types</h1>
       </div>
-        {/* <TypesDisplay/> */}
-      <div className='flex flex-col mx-20 md:mx-32 lg:mx-40 xl:mx-48'>
+        <TypesDisplay/>
+      <div className='flex flex-col mx-12 md:mx-32 lg:mx-40 xl:mx-48'>
         <hr className=' my-5 w-full border-zinc-200' />
 
         <h1 className='font-semibold text-3xl'>Restaurants</h1>

@@ -29,19 +29,27 @@ export function Restaurants() {
 
   useEffect(() => {
     const filterName = searchParams.get("name") || "";
-    // const filterType = searchParams.get("type") || "";
-
-    const cardsFiltered = mockCards["restaurants"].filter((card) =>
-      card.name.toLowerCase().includes(filterName.toLowerCase())
-    );
-
+    const filterType = searchParams.get("type") || "";
+  
+    const cardsFiltered = mockCards["restaurants"].filter((card) => {
+      const nameMatch = filterName === "" || card.name.toLowerCase().includes(filterName.toLowerCase());
+      const typeMatch = filterType === "" || card.type.toLowerCase().includes(filterType.toLowerCase());
+  
+      return nameMatch && typeMatch;
+    });
+  
     setCards(cardsFiltered);
   }, [searchParams]);
 
   const handleFilterRestaurants = (filterName: string, filterType: string): void => {
     searchParams.set("name", filterName);
-    searchParams.set("type", filterType);
-    navigate(`/restaurants/?name=${filterName}&type=${filterType}`);
+    if (filterType !== "") {
+      searchParams.set("type", filterType);
+    } else {
+      searchParams.delete("type");
+    }
+
+    navigate(`/restaurants/?name=${filterName}${filterType !== "" ? `&type=${filterType}` : ""}`);
   };
 
   return (
