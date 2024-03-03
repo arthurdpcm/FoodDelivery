@@ -8,21 +8,32 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ name, address, telephone, photo }) => {
-  console.log(photo)
+
   return (
-    <div className="bg-zinc-700 ring-2 ring-yellow-400 rounded-lg flex flex-col p-5 ">
-      <img className='w-full h-28'
+    <div style={{borderWidth: '3px'}} className="flex flex-col max-w-sm bg-zinc-100 border border-solid border-blue-600  ring-blue-600 rounded-lg">
+      <img className='w-full h-44 rounded-t-md object-cover border-b-2 border-blue-600'
         src={photo} alt="Restaurant Image" 
       />
-      <h1 className='sm:text-2xl mt-5'><strong>{name}</strong></h1>
-      <p className='sm:text-md'>{address}</p>
-      <p className='sm:text-md'>{telephone}</p>
 
-      <button className='mt-5 h-10 rounded-lg text-zinc-700 font-semibold w-full bg-gradient-to-r from-yellow-400 to-yellow-500 
-              hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-600 tra'
+      <div className='px-5 mt-5 flex flex-col justify-between h-full'>
+        <h1 className='text-2xl'><strong>{
+            name.length > 20 ? name.slice(0,20).concat('...') :name 
+          }</strong></h1>
+        <p className='sm:text-md'>Address: {
+            address.length > 20 ? address.slice(0,20).concat('...') :address 
+          }</p>
+        <p className='sm:text-md'>Tel: {telephone}</p>
+
+        <button className='mt-auto mb-5  w-full h-12 rounded-lg text-zinc-100 font-semibold bg-gradient-to-r from-blue-400 to-blue-500 
+              hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600 tra'
       >
         <span>Check it out</span>
       </button>
+
+      </div>
+      
+
+
     </div>
   );
 };

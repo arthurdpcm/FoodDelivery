@@ -20,11 +20,11 @@
   "restaurants": [
     {
       "id": 1,
-      "name": "Restaurant A",
+      "name": "Healthy Food",
       "address": "123 Main St",
       "telephone": "555-1234",
       "owner_id": 101,
-      "photo":"./public/vite.svg",
+      "photo":"/vegan.jpg",
       "dishes": [
         {
           "dish": "Pizza",
@@ -42,11 +42,11 @@
     },
     {
       "id": 2,
-      "name": "Restaurant B",
+      "name": "Rolls and Temakis",
       "address": "456 Elm St",
       "telephone": "555-5678",
       "owner_id": 102,
-      "photo":"./public/vite.svg",
+      "photo":"/japanese.jpg",
       "dishes": [
         {
           "dish": "Sushi",
@@ -59,6 +59,94 @@
         {
           "dish": "Steak",
           "price": 15.99
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Taco Haven",
+      "address": "789 Maple St",
+      "telephone": "555-9010",
+      "owner_id": 101,
+      "photo":"/taco.jpeg",
+      "dishes": [
+        {
+          "dish": "Tacos",
+          "price": 7.99
+        },
+        {
+          "dish": "Quesadilla",
+          "price": 9.99
+        },
+        {
+          "dish": "Burrito",
+          "price": 11.99
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mediterranean Delight",
+      "address": "567 Cedar St",
+      "telephone": "555-2345",
+      "owner_id": 101,
+      "photo":"/mediterranean.jpg",
+      "dishes": [
+        {
+          "dish": "Hummus Platter",
+          "price": 8.99
+        },
+        {
+          "dish": "Falafel Wrap",
+          "price": 10.99
+        },
+        {
+          "dish": "Greek Salad",
+          "price": 12.99
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "BBQ Junction",
+      "address": "890 Pineapple St",
+      "telephone": "555-6789",
+      "owner_id": 102,
+      "photo":"/bbq.jpg",
+      "dishes": [
+        {
+          "dish": "Smoked Ribs",
+          "price": 14.99
+        },
+        {
+          "dish": "Pulled Pork Sandwich",
+          "price": 11.99
+        },
+        {
+          "dish": "Grilled Chicken",
+          "price": 10.99
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Sweet Treats Bakery",
+      "address": "987 Walnut St",
+      "telephone": "555-3456",
+      "owner_id": 102,
+      "photo":"/bakery.jpeg",
+      "dishes": [
+        {
+          "dish": "Chocolate Cake",
+          "price": 7.99
+        },
+        {
+          "dish": "Cupcakes Assortment",
+          "price": 9.99
+        },
+        {
+          "dish": "Cheesecake Slice",
+          "price": 8.99
         }
       ]
     }
