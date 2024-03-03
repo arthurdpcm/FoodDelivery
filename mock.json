@@ -20,33 +20,37 @@
   "restaurants": [
     {
       "id": 1,
-      "name": "Healthy Food",
+      "name": "Nourish Healthy Food",
+      "description": "A health-conscious eatery offering a variety of nutritious options such as wraps, sandwiches, and salads.",
       "address": "123 Main St",
       "telephone": "555-1234",
       "owner_id": 101,
       "photo":"/vegan.jpg",
+      "type":"Healthy",
       "dishes": [
         {
-          "dish": "Pizza",
+          "dish": "Sandwich with fried Eggs and salad",
           "price": 10.99
         },
         {
-          "dish": "Burger",
-          "price": 8.99
+          "dish": "Orange Juice",
+          "price": 6.99
         },
         {
-          "dish": "Salad",
-          "price": 6.99
+          "dish": "Ceaser Salad",
+          "price": 8.99
         }
       ]
     },
     {
       "id": 2,
-      "name": "Rolls and Temakis",
+      "name": "KYOTO SUSHI",
+      "description": "Immerse yourself in the flavors of Japan with a diverse menu featuring sushi, pasta, and steak at KYOTO SUSHI.",
       "address": "456 Elm St",
       "telephone": "555-5678",
       "owner_id": 102,
       "photo":"/japanese.jpg",
+      "type":"Japanese",
       "dishes": [
         {
           "dish": "Sushi",
@@ -64,11 +68,13 @@
     },
     {
       "id": 3,
-      "name": "Taco Haven",
+      "name": "Taco Bell",
+      "description": "Experience the taste of Mexico with a delicious assortment of tacos, quesadillas, and burritos at Taco Bell.",
       "address": "789 Maple St",
       "telephone": "555-9010",
       "owner_id": 101,
       "photo":"/taco.jpeg",
+      "type":"Mexican",
       "dishes": [
         {
           "dish": "Tacos",
@@ -87,10 +93,12 @@
     {
       "id": 4,
       "name": "Mediterranean Delight",
+      "description": "Transport yourself to the Mediterranean with delightful dishes like hummus platters, falafel wraps, and Greek salads.",
       "address": "567 Cedar St",
       "telephone": "555-2345",
       "owner_id": 101,
       "photo":"/mediterranean.jpg",
+      "type":"Mediterranean",
       "dishes": [
         {
           "dish": "Hummus Platter",
@@ -108,11 +116,13 @@
     },
     {
       "id": 5,
-      "name": "BBQ Junction",
+      "name": "Outback",
+      "description": "Savor the flavors of the Outback with smoked ribs, pulled pork sandwiches, and grilled chicken at this barbecue haven.",
       "address": "890 Pineapple St",
       "telephone": "555-6789",
       "owner_id": 102,
       "photo":"/bbq.jpg",
+      "type":"Barbecue",
       "dishes": [
         {
           "dish": "Smoked Ribs",
@@ -131,10 +141,12 @@
     {
       "id": 6,
       "name": "Sweet Treats Bakery",
+      "description": "Indulge your sweet tooth at Sweet Treats Bakery, where you can enjoy chocolate cakes, assorted cupcakes, and cheesecake slices.",
       "address": "987 Walnut St",
       "telephone": "555-3456",
       "owner_id": 102,
       "photo":"/bakery.jpeg",
+      "type":"Bakery",
       "dishes": [
         {
           "dish": "Chocolate Cake",
