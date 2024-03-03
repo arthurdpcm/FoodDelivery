@@ -36,7 +36,7 @@ const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards, screen}) => {
       <section className={ screen == "home" ? styleCardsDisplayHome : styleCardsDisplayRestaurants}
        >
         {cards.map((card) => (
-            <div key={card.id} className='flex justify-center'>
+            <div key={card.id} className='flex justify-center w-full'>
             
               <Card
                 type={card.type}

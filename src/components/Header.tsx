@@ -39,7 +39,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex gap-20 justify-between py-5 items-center bg-zinc-100">
+    <header className="flex gap-20 justify-between py-5 items-center bg-zinc-100 sticky top-0">
       <div className={`sm:mb-0 flex flex-row  items-center`}>
 
         {

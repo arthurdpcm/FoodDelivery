@@ -32,14 +32,14 @@ const Card: React.FC<CardProps> = ({ id, name, address, telephone, photo, screen
 
   return screen == "home" ? 
   (
-    <div style={{borderWidth: '3px'}} className="flex flex-col max-w-sm bg-zinc-100 border border-solid border-blue-600  ring-blue-600 rounded-lg">
+    <div style={{borderWidth: '3px'}} className="flex flex-col w-full bg-zinc-100 border border-solid border-blue-600  ring-blue-600 rounded-lg">
       <img className='w-full h-44 rounded-t-md object-cover border-b-2 border-blue-600'
         src={photo} alt="Restaurant Image" 
       />
 
       <div className='px-5 mt-5 flex flex-col justify-between h-full'>
         <div className='mb-5'>
-          <h1 className='text-2xl'><strong>{
+          <h1 className='text-2xl break-words'><strong>{
               name.length > 20 ? name.slice(0,20).concat('...') :name
             }</strong></h1>
           <p className='sm:text-md'>Address: {

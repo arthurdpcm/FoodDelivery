@@ -12,6 +12,7 @@ interface Card {
   owner_id: number;
   dishes: Dish[];
   photo?: string;
+  type:string;
 }
 
 interface Dish{
@@ -34,7 +35,7 @@ export function App() {
       <div className='flex flex-col'>
         <section className="flex justify-center">
           <form onSubmit={handleSearchRestaurant} className="mt-20 flex flex-col">
-            <h1 className=" text-2xl font-medium">In the mood for something specific?</h1>
+            <h1 className=" text-xl sm:text-2xl font-medium">In the mood for something specific?</h1>
     
             <div className='flex items-center mt-5 justify-end '>
               <input type="text" value={searchRestaurant} onChange={(e)=>setSearchRestaurant(e.target.value)}
@@ -53,13 +54,17 @@ export function App() {
           </form>
         </section>
         
-        <hr className=' my-5 w-3/4 mx-auto border-zinc-200' />
+      <div className='flex flex-col mx-20 md:mx-32 lg:mx-40 xl:mx-48'>
+        <hr className=' my-5 w-full border-zinc-200' />
 
-        <h1 className='ml-28 text-3xl'>Types</h1>
+        <h1 className='font-semibold text-3xl'>Types</h1>
+      </div>
         {/* <TypesDisplay/> */}
-        <hr className=' my-5 w-3/4 mx-auto border-zinc-200' />
+      <div className='flex flex-col mx-20 md:mx-32 lg:mx-40 xl:mx-48'>
+        <hr className=' my-5 w-full border-zinc-200' />
 
-        <h1 className='ml-28 text-3xl'>Restaurants</h1>
+        <h1 className='font-semibold text-3xl'>Restaurants</h1>
+      </div>
         <CardsDisplay screen="home" cards={cards}/>
 
       </div>
