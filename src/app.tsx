@@ -46,7 +46,7 @@ export function App() {
             " >
               
             </input>
-            <button type="submit"  className='absolute mr-3 text-blue-600 hover:text-blue-700' ><Search size={30}/></button>
+            <button type="submit"  className='absolute mr-3 text-blue-600 hover:text-blue-700' ><Search size={20}/></button>
           </div>
           
         </form>
