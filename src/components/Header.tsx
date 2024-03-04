@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MenuButton from "./MenuButton";
 import DeliveryGuy from "/delivery_guy.png"
 import { ShoppingCart } from 'lucide-react';
@@ -11,7 +11,7 @@ const Header = () => {
 
   const navigate = useNavigate()
   const {user} = useUserContext()
-  
+
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(() => {
     const storedValue = localStorage.getItem("isSmallScreen");
     return storedValue ? JSON.parse(storedValue) : window.innerWidth <= 1080;
