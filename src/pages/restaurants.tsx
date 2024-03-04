@@ -1,9 +1,9 @@
-import CardsDisplay from "./components/Card/CardsDisplay";
+import CardsDisplay from "../components/Card/CardsDisplay";
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import mockCards from "../mock.json"
+import mockCards from "../../mock.json"
 import { useEffect, useState } from "react";
-import Header from "./components/Header";
-import FilterRestaurants from "./components/Restaurant/FilterRestaurants";
+import Header from "../components/Header";
+import FilterRestaurants from "../components/Restaurant/FilterRestaurants";
 
 interface Card {
   id:number;
@@ -61,7 +61,7 @@ export function Restaurants() {
           nameRestaurant={searchParams.get("name") || ""}
           typeRestaurant={searchParams.get("type") || ""} 
         />
-        <CardsDisplay screen="restaurants" cards={cards}/>
+        <CardsDisplay screen="restaurants" cards={cards} />
       </div>
     
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard from '../components/Restaurant/RestaurantCardProfile';
 
 interface User {
   id: number;

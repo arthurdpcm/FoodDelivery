@@ -13,6 +13,11 @@ const FilterRestaurants: React.FC<FilterRestaurantsProps> = ({ onFilter, nameRes
   const handleFilter = () => {
     onFilter(nameRestaurantFilter, typeRestaurantFilter);
   };
+  const clearFilter = () => {
+    setNameRestaurantFilter("")
+    setTypeRestaurantFilter("")
+    onFilter("", "");
+  };
 
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,7 +39,7 @@ const FilterRestaurants: React.FC<FilterRestaurantsProps> = ({ onFilter, nameRes
         placeholder="Name"
         value={nameRestaurantFilter}
         onChange={handleNameChange}
-        className="h-12 rounded-lg w-1/6
+        className=" h-12 rounded-lg w-1/6
         bg-zinc-200 p-3 font-normal text-zinc-800
           focus:outline-none focus:ring-2 focus:ring-blue-600
           caret-blue-600
@@ -53,10 +58,15 @@ const FilterRestaurants: React.FC<FilterRestaurantsProps> = ({ onFilter, nameRes
         
         " 
       />
-      <button className='p-3  mb-1 bg-gradient-to-r from-blue-400 to-blue-500 text-zinc-100 font-normal h-12 w-24 rounded-md
-                      hover:from-blue-500 hover:to-blue-600 hover:text-zinc-200 transition duration-300' 
+      <button className='p-3  mb-1 bg-gradient-to-r from-blue-500 to-blue-600 text-zinc-200 font-normal h-12 w-16 sm:w-24 rounded-md
+                      hover:from-blue-400 hover:to-blue-500 hover:text-zinc-100' 
               onClick={handleFilter}>
         Filter
+      </button>
+      <button className='p-3  mb-1 bg-gradient-to-r from-red-500 to-red-600 text-zinc-200 font-normal h-12 w-16 sm:w-24 rounded-md
+                      hover:from-red-400 hover:to-red-500 hover:text-zinc-100' 
+              onClick={clearFilter}>
+        Clear
       </button>
     </div>
   );

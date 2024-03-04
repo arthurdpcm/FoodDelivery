@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './app';
-import { Restaurants } from './restaurants';
+import { App } from './pages/app';
+import { Restaurants } from './pages/restaurants';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import RestaurantPage from './RestaurantPage';
+import RestaurantPage from './pages/RestaurantPage';
+import { UserContextProvider } from './contexts/UserContext';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>
   </React.StrictMode>,
 );

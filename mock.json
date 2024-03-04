@@ -30,15 +30,18 @@
       "dishes": [
         {
           "dish": "Sandwich with fried Eggs and salad",
-          "price": 10.99
+          "price": 10.99,
+          "photo": "/sandwich.jpg"
         },
         {
           "dish": "Orange Juice",
-          "price": 6.99
+          "price": 6.99,
+          "photo": "/orange_juice.jpg"
         },
         {
           "dish": "Ceaser Salad",
-          "price": 8.99
+          "price": 8.99,
+          "photo": "/ceaser_salad.jpg"
         }
       ]
     },
@@ -54,15 +57,18 @@
       "dishes": [
         {
           "dish": "Sushi",
-          "price": 12.99
+          "price": 12.99,
+          "photo": "/sushi.jpg"
         },
         {
           "dish": "Pasta",
-          "price": 9.99
+          "price": 9.99,
+          "photo": "/pasta.jpg"
         },
         {
           "dish": "Steak",
-          "price": 15.99
+          "price": 15.99,
+          "photo": "/steak.jpg"
         }
       ]
     },
@@ -78,15 +84,18 @@
       "dishes": [
         {
           "dish": "Tacos",
-          "price": 7.99
+          "price": 7.99,
+          "photo": "/tacos.jpg"
         },
         {
           "dish": "Quesadilla",
-          "price": 9.99
+          "price": 9.99,
+          "photo": "/quesadilla.jpg"
         },
         {
           "dish": "Burrito",
-          "price": 11.99
+          "price": 11.99,
+          "photo": "/burrito.jpg"
         }
       ]
     },
@@ -102,15 +111,18 @@
       "dishes": [
         {
           "dish": "Hummus Platter",
-          "price": 8.99
+          "price": 8.99,
+          "photo": "/hummus.jpg"
         },
         {
           "dish": "Falafel Wrap",
-          "price": 10.99
+          "price": 10.99,
+          "photo": "/falafel.jpg"
         },
         {
           "dish": "Greek Salad",
-          "price": 12.99
+          "price": 12.99,
+          "photo": "/greek_salad.jpg"
         }
       ]
     },
@@ -126,15 +138,18 @@
       "dishes": [
         {
           "dish": "Smoked Ribs",
-          "price": 14.99
+          "price": 14.99,
+          "photo": "/smoked_ribs.jpg"
         },
         {
           "dish": "Pulled Pork Sandwich",
-          "price": 11.99
+          "price": 11.99,
+          "photo": "/pork_sandwich.jpg"
         },
         {
           "dish": "Grilled Chicken",
-          "price": 10.99
+          "price": 10.99,
+          "photo": "/grilled_chicken.jpg"
         }
       ]
     },
@@ -150,15 +165,18 @@
       "dishes": [
         {
           "dish": "Chocolate Cake",
-          "price": 7.99
+          "price": 7.99,
+          "photo": "/chocolate_cake.jpg"
         },
         {
           "dish": "Cupcakes Assortment",
-          "price": 9.99
+          "price": 9.99,
+          "photo":"/cupcake.jpg"
         },
         {
           "dish": "Cheesecake Slice",
-          "price": 8.99
+          "price": 8.99,
+          "photo": "/cheesecake.jpg"
         }
       ]
     },
@@ -174,15 +192,18 @@
       "dishes": [
         {
           "dish": "Sourdough Bread",
-          "price": 5.99
+          "price": 5.99,
+          "photo": "/sourdough.jpg"
         },
         {
           "dish": "Almond Croissant",
-          "price": 4.49
+          "price": 4.49,
+          "photo": "/croissant.jpg"
         },
         {
           "dish": "Fruit Tart",
-          "price": 6.99
+          "price": 6.99,
+          "photo": "/fruit_tart.jpg"
         }
       ]
     }

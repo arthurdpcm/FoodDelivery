@@ -1,9 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import MenuButton from "./MenuButton";
 import DeliveryGuy from "/delivery_guy.png"
+import { ShoppingCart } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
+import { useUserContext } from "../contexts/UserContext";
+
 
 
 const Header = () => {
+
+  const navigate = useNavigate()
+  const {user} = useUserContext()
+  
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(() => {
     const storedValue = localStorage.getItem("isSmallScreen");
     return storedValue ? JSON.parse(storedValue) : window.innerWidth <= 1080;
@@ -14,7 +22,8 @@ const Header = () => {
     return storedValue ? JSON.parse(storedValue) : window.innerWidth <= 640;
   });
 
-  const isLogged = true
+  
+
   useEffect(() => {
     const handleResize = () => {
       const newSize = window.innerWidth <= 1080;
@@ -60,16 +69,24 @@ const Header = () => {
         ) : (
           <nav className="sm:mr-20 mr-16">
             <ul className="flex flex-row gap-4 text-sm sm:text-xl items-center">
-              <li className="w-20"><a href="#" className="hover:underline font-normal">{!isLogged ? 'Sign Up' : 'Log out'} </a></li>
+              <li className="w-20"><a href="#" className="hover:underline font-normal">{!user ? 'Sign Up' : 'Log out'} </a></li>
               <li>
                 <a href="#">
                   <button
-                    className="p-3  mb-1 bg-gradient-to-r from-blue-400 to-blue-500 text-zinc-100 font-normal h-12 w-24 rounded-md
-                      hover:from-blue-500 hover:to-blue-600 hover:text-zinc-200 transition duration-300">
-                    {!isLogged ? 'Sign In' : 'Profile'}
+                    className="p-3  mb-1 bg-gradient-to-r from-blue-500 to-blue-600 text-zinc-200 font-normal h-12 w-24 rounded-md
+                      hover:from-blue-400 hover:to-blue-500 hover:text-zinc-100 transition duration-300">
+                    {!user ? 'Sign In' : 'Profile'}
+                    
                   </button>
                 </a>
               </li>              
+              {user ? (
+                <li>
+                  <button onClick={()=>navigate(`/cart`)} className="hover:bg-zinc-200 p-3 rounded-full">
+                    <ShoppingCart size={24}/>
+                  </button>
+                </li>
+              ) : null}
             </ul>
           </nav>
         )}

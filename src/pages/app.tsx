@@ -1,9 +1,9 @@
 import { Search } from 'lucide-react';
-import CardsDisplay from "./components/Card/CardsDisplay";
-import Header from "./components/Header";
-import mockCards from "../mock.json"
+import CardsDisplay from "../components/Card/CardsDisplay";
+import Header from "../components/Header";
+import mockCards from "../../mock.json"
 import { useState } from "react";
-import TypesDisplay from './components/TypesDisplay';
+import TypesDisplay from '../components/TypesDisplay';
 
 interface Card {
   id:number;
@@ -35,7 +35,7 @@ export function App() {
       <Header/>
       <div className='flex flex-col'>
         <section className="flex justify-center">
-          <form onSubmit={handleSearchRestaurant} className="mt-20 flex flex-col">
+          <form onSubmit={handleSearchRestaurant} className="my-20 flex flex-col">
             <h1 className=" text-xl sm:text-2xl font-medium">In the mood for something specific?</h1>
     
             <div className='flex items-center mt-5 justify-end '>

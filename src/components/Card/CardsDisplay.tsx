@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './Card';
+import Pagination from '../Pagination';
 
 interface Card {
   id: number;
@@ -19,10 +20,12 @@ interface Dish {
 
 interface CardsDisplayProps {
   cards: Card[];
-  screen: "home" | "restaurants"
+  screen: "home" | "restaurants";
+
 }
 
 const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards, screen}) => {
+
 
   const styleCardsDisplayHome = `grid grid-cols-1
   sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3
@@ -31,11 +34,21 @@ const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards, screen}) => {
 
   const styleCardsDisplayRestaurants = `mt-8 flex flex-col w-full`
 
+  const pageSize = screen === "home" ? 6 : 10;
+  const [currentPage, setCurrentPage] = useState(1);
+
+
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+
+  const currentCards = cards.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(cards.length / pageSize);
+
   return (
     <>
       <section className={ screen == "home" ? styleCardsDisplayHome : styleCardsDisplayRestaurants}
        >
-        {cards.map((card) => (
+        {currentCards.map((card) => (
             <div key={card.id} className='flex justify-center w-full'>
             
               <Card
@@ -49,9 +62,13 @@ const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards, screen}) => {
                 screen={screen}
               />
             
-            </div>
+            </div> // 317 x 370
         ))}
+
+
       </section>
+      <Pagination currentPage={currentPage} totalPages={totalPages} itemsCount={cards.length} onPageChange={(page) => setCurrentPage(page)} pageSize={pageSize}/>
+      
     </>
   );
 };

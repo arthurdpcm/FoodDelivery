@@ -40,7 +40,7 @@ const Card: React.FC<CardProps> = ({ id, name, address, telephone, photo, screen
       <div className='px-5 mt-5 flex flex-col justify-between h-full'>
         <div className='mb-5'>
           <h1 className='text-2xl break-words'><strong>{
-              name.length > 20 ? name.slice(0,20).concat('...') :name
+              name.length > 15 ? name.slice(0,15).concat('...') :name
             }</strong></h1>
           <p className='sm:text-md'>Address: {
               address.length > 20 ? address.slice(0,20).concat('...') : address
@@ -49,7 +49,7 @@ const Card: React.FC<CardProps> = ({ id, name, address, telephone, photo, screen
         </div>
 
         <button className='mt-auto mb-5 w-full h-12 rounded-lg text-zinc-100 font-semibold bg-gradient-to-r from-blue-400 to-blue-500 
-              hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600 tra'
+              hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600' onClick={()=> navigate(`/restaurants/${id}`)}
       >
         <span>Check it out</span>
       </button>
@@ -57,7 +57,11 @@ const Card: React.FC<CardProps> = ({ id, name, address, telephone, photo, screen
       </div>
     </div>
   ) : (
-    <div style={{borderWidth: '2px'}} className=" mb-5 flex lg:w-1/2 w-3/4 h-20 sm:h-24 bg-zinc-100 border border-solid border-blue-600  ring-blue-600 rounded-lg">
+    <div style={{borderWidth: '2px'}} onClick={()=> navigate(`/restaurants/${id}`)}
+      className="cursor-pointer mb-5 flex lg:w-1/2 w-3/4 h-20 sm:h-24 bg-zinc-100 border border-solid
+       border-blue-600  ring-blue-600 rounded-lg
+        hover:bg-zinc-200
+       ">
       <img className='h-full rounded-l-md border-r-2 border-blue-600'
         src={photo} alt="Restaurant Image" 
       />
@@ -69,12 +73,12 @@ const Card: React.FC<CardProps> = ({ id, name, address, telephone, photo, screen
 
           }</strong> • {type}</h1>
 
-          <button  onClick={()=> navigate(`/restaurants/${id}`)}
+          {/* <button  onClick={()=> navigate(`/restaurants/${id}`)}
             className=' ml-auto text-sm sm:text-lg px-5 sm:px-5 h-10 rounded-md text-zinc-100 font-normal
                 bg-gradient-to-r from-blue-400 to-blue-500 
                 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600'
                 
-          >Details</button>
+          >Details</button> */}
 
 
       </div>

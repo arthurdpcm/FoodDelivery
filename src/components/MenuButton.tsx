@@ -2,6 +2,7 @@
 import { useState } from 'react';
 // import MenuHome from './MenuHome';
 import '../../styles/menuButton.css';
+import { useUserContext } from '../contexts/UserContext';
 // import {   } from 'react-router-dom';
 
 
@@ -12,7 +13,9 @@ import '../../styles/menuButton.css';
 const MenuButton: React.FC = () => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const isLogged = false
+  
+  const {user} = useUserContext()
+
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -39,7 +42,7 @@ const MenuButton: React.FC = () => {
               <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
                 <a href='/' className=' py-5 block' onClick={handleCloseMenu}>Orders</a>
               </li>
-              {!isLogged ? (
+              {!user ? (
                 <>
                     <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
                       <a href='/' className=' py-5 block' onClick={handleCloseMenu}>Log In</a>
