@@ -1,14 +1,7 @@
-// import { Menu } from 'lucide-react';
 import { useState } from 'react';
-// import MenuHome from './MenuHome';
 import '../../styles/menuButton.css';
 import { useUserContext } from '../contexts/UserContext';
-// import {   } from 'react-router-dom';
 
-
-// interface MenuButtonProps{
-//   className:string;
-// }
 
 const MenuButton: React.FC = () => {
 
@@ -18,10 +11,6 @@ const MenuButton: React.FC = () => {
 
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleCloseMenu = () => {
-    setIsOpen(false);
   };
 
   return (
@@ -40,24 +29,24 @@ const MenuButton: React.FC = () => {
                 <a href='/restaurants' className=' py-5 block'>Restaurants</a>
               </li>
               <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
-                <a href='/' className=' py-5 block' onClick={handleCloseMenu}>Orders</a>
+                <a href='/Orders' className=' py-5 block' onClick={()=>console.log("Order")}>Orders</a>
               </li>
               {!user ? (
                 <>
                     <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
-                      <a href='/' className=' py-5 block' onClick={handleCloseMenu}>Log In</a>
+                      <a href='/' className=' py-5 block' onClick={()=>console.log("Log in")}>Log In</a>
                     </li>
                     <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
-                      <a href='/' className=' py-5 block' onClick={handleCloseMenu}>Sign Up</a>
+                      <a href='/' className=' py-5 block' onClick={()=>console.log("Sign Up")}>Sign Up</a>
                     </li>
                   </>
               ):(
                 <>
                   <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
-                    <a href='/' className=' py-5 block' onClick={handleCloseMenu}>Profile</a>
+                    <a href={user ? `/profile` : `/signIn`} className=' py-5 block'>Profile</a>
                   </li>
                   <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
-                    <a href='/' className=' py-5 block' onClick={handleCloseMenu}>Log out</a>
+                    <a href='/' className=' py-5 block' onClick={()=>console.log("Log out")}>Log out</a>
                   </li>
                 </>
               )}
