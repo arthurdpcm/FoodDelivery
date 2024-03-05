@@ -7,7 +7,7 @@ import { useUserContext } from "../contexts/UserContext";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { user, setUser } = useUserContext();
+  const { user } = useUserContext();
 
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(() => {
     const storedValue = localStorage.getItem("isSmallScreen");
@@ -66,7 +66,7 @@ const Header = () => {
           <nav className="sm:mr-20 mr-16">
             <ul className="flex flex-row gap-4 text-sm sm:text-xl items-center">
               <li className="w-20">
-                <button onClick={() =>!user ? navigate( `/signUp`): setUser(null)} className="hover:underline font-normal">
+                <button onClick={() =>!user ? navigate( `/signUp`): (navigate('/login'))} className="hover:underline font-normal">
                   {!user ? "Sign Up" : "Log out"}{" "}
                 </button>
               </li>

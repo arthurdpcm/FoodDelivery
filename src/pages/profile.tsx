@@ -2,29 +2,35 @@ import React from 'react';
 import RestaurantCard from '../components/Restaurant/RestaurantCardProfile';
 import { useUserContext } from '../contexts/UserContext';
 import Header from '../components/Header';
-import { Navigate } from 'react-router-dom';
+
 
 const Profile: React.FC = () => {
   const { user } = useUserContext();
+  // const navigate = useNavigate()
+    
 
-  
-  if (!user) {
-    return <Navigate to="/login" />;
-  }
 
   return (
     <>
       <Header />
-      <div className="mx-8 my-4">
-        <h1 className="text-4xl font-bold mb-2">{user.name}</h1>
-        <p className="text-lg mb-1">{user.address}</p>
-        <p className="text-lg mb-4">{user.telephone}</p>
-        <h2 className="text-2xl font-bold mb-2">Owned Restaurants</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {user.own_restaurants.map((restaurantId) => (
-            <RestaurantCard key={restaurantId} id={restaurantId} />
-          ))}
+     
+      <div className="mx-8 my-8 flex flex-col justify-center items-center ">
+        <div className='my-5 p-8 bg-gray-100 rounded-lg shadow-2xl border-l-2 border-b-4 border-blue-600'>
+            <h1 className="text-4xl font-bold mb-2">{user?.name}</h1>
+            <p className="text-lg mb-1">{user?.address}</p>
+            <p className="text-lg mb-4">{user?.telephone}</p>
+
         </div>
+        <h2 className="mt-5 text-2xl font-bold mb-2">Your Restaurants</h2>
+        {user && user.own_restaurants.length > 0 ? (
+          <div className="flex flex-col">
+            {user?.own_restaurants.map((restaurantId) => (
+              <RestaurantCard key={restaurantId} id={restaurantId} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-lg">You don't own any restaurants yet.</p>
+        )}
       </div>
     </>
   );

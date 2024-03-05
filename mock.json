@@ -5,29 +5,8 @@
       "name": "John Doe",
       "address": "789 Oak St",
       "telephone": "555-9012",
-      "own_restaurants": [1],
+      "own_restaurants": [1, 3, 4, 7],
       "cart": [
-        {
-          "id": 1,
-          "restaurant":"Nourish Healthy Food",
-          "dish": "Sandwich with fried Eggs and salad",
-          "price": 10.99,
-          "amount":1
-        },
-        { 
-        "id": 2,
-        "restaurant":"Nourish Healthy Food",
-        "dish": "Orange Juice",
-        "price": 6.99,
-        "amount":1
-        },
-        {
-          "id": 3,
-          "restaurant":"Nourish Healthy Food",
-          "dish": "Ceaser Salad",
-          "price": 8.99,
-          "amount":1
-        }
       ] 
     },
     {
@@ -228,7 +207,7 @@
       "description": "Experience the art of baking at Flourish Artisan Bakery, where we create a variety of artisan bread, pastries, and specialty desserts.",
       "address": "123 Rosemary Lane",
       "telephone": "555-6789",
-      "owner_id": 103,
+      "owner_id": 101,
       "photo": "/artisan_bakery.jpeg",
       "type": "Bakery",
       "dishes": [

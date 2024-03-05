@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import mockCards from "../../mock.json"
 import { useState } from "react";
 import TypesDisplay from '../components/TypesDisplay';
+import { useUserContext } from '../contexts/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 interface Card {
   id:number;
@@ -22,12 +24,16 @@ interface Dish{
 }
 
 export function App() {
+  const {user} = useUserContext()
   const [cards] = useState<Card[]>(mockCards["restaurants"]);
   const [searchRestaurant, setSearchRestaurant] = useState<string>("")
-
+  const navigate = useNavigate()
   function handleSearchRestaurant(event: React.FormEvent){
     event.preventDefault();
     window.location.href = `/restaurants/?name=${searchRestaurant}`
+  }
+  if (!user) {
+    navigate("/login")
   }
 
   return (
@@ -47,9 +53,9 @@ export function App() {
                 caret-blue-600
               
               " >
-                
+
               </input>
-              <button type="submit"  className='absolute mr-3 text-blue-600 hover:text-blue-700' ><Search size={20}/></button>
+              <button type="submit"  className=' ml-3 text-blue-600 hover:text-blue-700' ><Search size={20}/></button>
             </div>
             
           </form>

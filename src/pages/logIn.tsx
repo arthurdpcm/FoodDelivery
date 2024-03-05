@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import bakeryImage from '/bakery.jpeg';
+import { useUserContext } from '../contexts/UserContext';
 
 interface loginProps {
   login:boolean
@@ -11,6 +12,7 @@ const Login: React.FC<loginProps> = ({login}) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
+  const {user, setUser} = useUserContext()
   const navigate = useNavigate();
 
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,6 +31,7 @@ const Login: React.FC<loginProps> = ({login}) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setUser(user)
     navigate('/');
   };
 
