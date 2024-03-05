@@ -1,16 +1,32 @@
 import React from 'react';
+import { useUserContext } from '../../contexts/UserContext';
 
 interface DishCardProps {
   dish: string;
   price: number;
   photo:string;
+  id:number;
 }
 
-const DishCard: React.FC<DishCardProps> = ({ dish, price, photo }) => {
+const DishCard: React.FC<DishCardProps> = ({ dish, price, photo, id }) => {
+  
+  const { user, setUser } = useUserContext();
 
-  const addItemToCard = (dish: string, price:number) =>{
-      console.log(dish, price)
-  }
+  const addItemToCart = () => {
+    if (user) {
+      const updatedCart = [
+        ...user.cart,
+        {
+          id: id,
+          dish: dish,
+          price: price,
+          amount: 1, 
+        },
+      ];
+
+      setUser((prevUser) => prevUser ? { ...prevUser, cart: updatedCart } : null);
+    }
+  };
 
   return (
     <div className='mb-8 flex flex-col max-w-screen-md gap-10 w-3/4 pl-2 py-5 sm:p-8 bg-gray-100 rounded-lg
@@ -20,7 +36,7 @@ const DishCard: React.FC<DishCardProps> = ({ dish, price, photo }) => {
         <div className='flex flex-col w-full pr-16'>
           <h1 className='text-lg sm:text-2xl font-bold mb-1'>{dish}</h1>
           <p className='text-zinc-600 text-lg sm:text-xl mb-2'>${price}</p>
-          <button  onClick={()=>addItemToCard(dish, price)}
+          <button  onClick={()=>addItemToCart()}
             className="mt-auto ml-auto font-normal text-lg sm:w-12 sm:h-12 w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-zinc-200 
                       hover:from-blue-400 hover:to-blue-500 hover:text-zinc-100">
                         +

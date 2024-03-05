@@ -28,9 +28,7 @@ const MenuButton: React.FC = () => {
               <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
                 <a href='/restaurants' className=' py-5 block'>Restaurants</a>
               </li>
-              <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
-                <a href='/Orders' className=' py-5 block' onClick={()=>console.log("Order")}>Orders</a>
-              </li>
+
               {!user ? (
                 <>
                     <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
@@ -43,7 +41,7 @@ const MenuButton: React.FC = () => {
               ):(
                 <>
                   <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
-                    <a href={user ? `/profile` : `/signIn`} className=' py-5 block'>Profile</a>
+                    <a href={user ? `/profile` : `/Login`} className=' py-5 block'>Profile</a>
                   </li>
                   <li className='hover:bg-blue-600 hover:bg-opacity-60 transition duration-300'>
                     <a href='/' className=' py-5 block' onClick={()=>console.log("Log out")}>Log out</a>

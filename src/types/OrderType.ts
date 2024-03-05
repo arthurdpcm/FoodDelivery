@@ -1,7 +1,9 @@
 interface OrderType {
   id:number;
-  item:string;
+  dish:string;
+  price:number;
   amount:number;
+  restaurant:string;
 }
 
 export default OrderType

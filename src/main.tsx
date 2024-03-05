@@ -7,6 +7,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RestaurantPage from './pages/RestaurantPage';
 import { UserContextProvider } from './contexts/UserContext';
 import Profile from './pages/profile';
+import CartPage from './pages/cart';
+import Login from './pages/logIn';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,18 @@ const router = createBrowserRouter([
   {
     path: "/restaurants/:id",
     element: <RestaurantPage />,
+  },
+  {
+    path: "/cart",
+    element: <CartPage />,
+  },
+  {
+    path: "/Login",
+    element: <Login login={true} />,
+  },
+  {
+    path: "/SignUp",
+    element: <Login login={false} />,
   },
   
 ]);

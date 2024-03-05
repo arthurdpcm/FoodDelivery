@@ -29,7 +29,7 @@ const RestaurantPage: React.FC = () => {
             <div className='flex flex-col max-w-screen-md items-center mt-10'>
               {restaurant.dishes.map((dish) => (
                 
-                <DishCard key={dish.dish} photo={dish.photo} dish={dish.dish} price={dish.price} />
+                <DishCard key={dish.dish} id={dish.id} photo={dish.photo} dish={dish.dish} price={dish.price} />
               ))}
             </div>
           </div>

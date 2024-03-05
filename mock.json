@@ -6,7 +6,29 @@
       "address": "789 Oak St",
       "telephone": "555-9012",
       "own_restaurants": [1],
-      "cart": [] 
+      "cart": [
+        {
+          "id": 1,
+          "restaurant":"Nourish Healthy Food",
+          "dish": "Sandwich with fried Eggs and salad",
+          "price": 10.99,
+          "amount":1
+        },
+        { 
+        "id": 2,
+        "restaurant":"Nourish Healthy Food",
+        "dish": "Orange Juice",
+        "price": 6.99,
+        "amount":1
+        },
+        {
+          "id": 3,
+          "restaurant":"Nourish Healthy Food",
+          "dish": "Ceaser Salad",
+          "price": 8.99,
+          "amount":1
+        }
+      ] 
     },
     {
       "id": 102,
@@ -14,7 +36,9 @@
       "address": "321 Pine St",
       "telephone": "555-3456",
       "own_restaurants": [2],
-      "cart": [] 
+      "cart": [
+
+      ] 
     }
   ],
   "restaurants": [
@@ -25,20 +49,23 @@
       "address": "123 Main St",
       "telephone": "555-1234",
       "owner_id": 101,
-      "photo":"/vegan.jpg",
-      "type":"Healthy",
+      "photo": "/vegan.jpg",
+      "type": "Healthy",
       "dishes": [
         {
+          "id": 1,
           "dish": "Sandwich with fried Eggs and salad",
           "price": 10.99,
           "photo": "/sandwich.jpg"
         },
         {
+          "id": 2,
           "dish": "Orange Juice",
           "price": 6.99,
           "photo": "/orange_juice.jpg"
         },
         {
+          "id": 3,
           "dish": "Ceaser Salad",
           "price": 8.99,
           "photo": "/ceaser_salad.jpg"
@@ -52,20 +79,23 @@
       "address": "456 Elm St",
       "telephone": "555-5678",
       "owner_id": 102,
-      "photo":"/japanese.jpg",
-      "type":"Japanese",
+      "photo": "/japanese.jpg",
+      "type": "Japanese",
       "dishes": [
         {
+          "id": 4,
           "dish": "Sushi",
           "price": 12.99,
           "photo": "/sushi.jpg"
         },
         {
+          "id": 5,
           "dish": "Pasta",
           "price": 9.99,
           "photo": "/pasta.jpg"
         },
         {
+          "id": 6,
           "dish": "Steak",
           "price": 15.99,
           "photo": "/steak.jpg"
@@ -79,20 +109,23 @@
       "address": "789 Maple St",
       "telephone": "555-9010",
       "owner_id": 101,
-      "photo":"/taco.jpeg",
-      "type":"Mexican",
+      "photo": "/taco.jpeg",
+      "type": "Mexican",
       "dishes": [
         {
+          "id": 7,
           "dish": "Tacos",
           "price": 7.99,
           "photo": "/tacos.jpg"
         },
         {
+          "id": 8,
           "dish": "Quesadilla",
           "price": 9.99,
           "photo": "/quesadilla.jpg"
         },
         {
+          "id": 9,
           "dish": "Burrito",
           "price": 11.99,
           "photo": "/burrito.jpg"
@@ -106,20 +139,23 @@
       "address": "567 Cedar St",
       "telephone": "555-2345",
       "owner_id": 101,
-      "photo":"/mediterranean.jpg",
-      "type":"Mediterranean",
+      "photo": "/mediterranean.jpg",
+      "type": "Mediterranean",
       "dishes": [
         {
+          "id": 10,
           "dish": "Hummus Platter",
           "price": 8.99,
           "photo": "/hummus.jpg"
         },
         {
+          "id": 11,
           "dish": "Falafel Wrap",
           "price": 10.99,
           "photo": "/falafel.jpg"
         },
         {
+          "id": 12,
           "dish": "Greek Salad",
           "price": 12.99,
           "photo": "/greek_salad.jpg"
@@ -133,20 +169,23 @@
       "address": "890 Pineapple St",
       "telephone": "555-6789",
       "owner_id": 102,
-      "photo":"/bbq.jpg",
-      "type":"Barbecue",
+      "photo": "/bbq.jpg",
+      "type": "Barbecue",
       "dishes": [
         {
+          "id": 13,
           "dish": "Smoked Ribs",
           "price": 14.99,
           "photo": "/smoked_ribs.jpg"
         },
         {
+          "id": 14,
           "dish": "Pulled Pork Sandwich",
           "price": 11.99,
           "photo": "/pork_sandwich.jpg"
         },
         {
+          "id": 15,
           "dish": "Grilled Chicken",
           "price": 10.99,
           "photo": "/grilled_chicken.jpg"
@@ -160,20 +199,23 @@
       "address": "987 Walnut St",
       "telephone": "555-3456",
       "owner_id": 102,
-      "photo":"/bakery.jpeg",
-      "type":"Bakery",
+      "photo": "/bakery.jpeg",
+      "type": "Bakery",
       "dishes": [
         {
+          "id": 16,
           "dish": "Chocolate Cake",
           "price": 7.99,
           "photo": "/chocolate_cake.jpg"
         },
         {
+          "id": 17,
           "dish": "Cupcakes Assortment",
           "price": 9.99,
-          "photo":"/cupcake.jpg"
+          "photo": "/cupcake.jpg"
         },
         {
+          "id": 18,
           "dish": "Cheesecake Slice",
           "price": 8.99,
           "photo": "/cheesecake.jpg"
@@ -191,16 +233,19 @@
       "type": "Bakery",
       "dishes": [
         {
+          "id": 19,
           "dish": "Sourdough Bread",
           "price": 5.99,
           "photo": "/sourdough.jpg"
         },
         {
+          "id": 20,
           "dish": "Almond Croissant",
           "price": 4.49,
           "photo": "/croissant.jpg"
         },
         {
+          "id": 21,
           "dish": "Fruit Tart",
           "price": 6.99,
           "photo": "/fruit_tart.jpg"
